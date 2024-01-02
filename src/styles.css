@@ -1,0 +1,463 @@
+body {
+  margin: 0px;
+  font-family: 'Lato';
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: nowrap column;
+  overflow-x: hidden;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+nav {
+   /* width: 79vw; */
+  height: 5vh; 
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 0 0 auto;
+  z-index:2;
+  position: relative;
+  background-color: #f8f8ff ;
+  /* background-color: #91a3b0 ; */
+  /* background-color: #979aaa ; */
+  /* background-color: #dcdcdc  ; */
+
+
+
+  /* background-image: url("../src/Images/body-bg.jpg"); */
+  border-bottom: 2px solid #3F51B5;
+
+  /* background-image: url("../src/Images/body-bg.jpg"); */
+
+}
+
+.model {
+  width: 100%;
+  height: 95vh;
+}
+
+.panel {
+  display: flex;
+  position: relative;
+}
+
+.header {
+  background: lightblue;
+  min-height: 50px;
+  height: 100%;
+}
+
+
+.body {
+  /* background: gray; */
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row nowrap;
+}
+
+.sideBarResizeContainer {
+  width: 30%;
+}
+
+.sidebar {
+  /* background:#f8f8ff; */
+  /* background-image: url("../src/Images/body-bg.jpg"); */
+
+  min-width: 415px;
+  /* max-width: 550px; */
+  width: 415px;
+  box-sizing: border-box;
+  text-align: center;
+  flex-grow: 1;
+  background-color: #f0f8ff;
+  /* background-color:#8c92ac; */
+
+
+  /* background-color: #91a3b0 ; */
+  /* background-color: #dcdcdc  ; */
+
+
+  /* background-color: #979aaa ; */
+
+
+}
+
+/* .fixed{
+  position: fixed;
+} */
+.css-46bh2p-MuiCardContent-root {
+  padding: 16px;
+}
+
+/* footer{
+  position: relative;
+
+} */
+
+
+
+.withMargin {
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+option {
+  font-size: 13px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 550;
+  margin: 0;
+  color: black;
+}
+
+.content {
+  flex-grow: 2;
+  background: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.acc {
+  /* background-color:#00446a; */
+
+  /* background-color:  rgb(255, 171, 41); */
+  background-color: rgb(23, 18, 31);
+  /* background-color:#654321; */
+  /* background-color:#480607; */
+  /* background-color:#808000; */
+
+
+
+  width: 100%;
+  padding: 10px 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  /* color: #FFF00C; */
+  /* color: #7cfc00; */
+  /* color: #00ffff ; */
+
+  /* color:#fffc79; */
+
+
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  text-align: center;
+  padding: 10px;
+}
+canvas {
+  position: fixed;
+}
+
+.sidebarcontent {
+  width: 100%;
+  height: 100%;
+  /* margin: 8px; */
+  /* position: fixed; */
+}
+
+.sidebarcards {
+  
+  margin: 8px;
+}
+
+.cardheader {
+  background-color: #000;
+  width: 100%;
+  padding: 10px 15px;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  display: flex;
+  gap: 10PX;
+  align-items: center;
+  color: white;
+}
+
+.customHandle {
+  cursor: ew-resize;
+  width: 10px;
+  height: 100px;
+  margin: 0px -5px;
+  background: lightblue;
+  border: 2px solid gray;
+  border-radius: 2px;
+  text-align: center;
+  z-index: 99999;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.customResizeBorder {
+  cursor: ew-resize;
+  width: 5px;
+  background: gray;
+  display: flex;
+  z-index: 99999;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: visible;
+
+}
+
+
+
+
+
+
+.columnResizer {
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  padding: 0 0 0 0;
+  position: relative;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  /* background-color: red; */
+
+  /* border-right: 1px solid black; */
+  /* border: 1px solid; */
+}
+
+/* .columnResizer:nth-child(1){
+  display: none;
+} */
+/* .columnResizer:not(.disabled_column_resize):after {
+  content: url("../src/Images/resize_disabled_icon.svg");
+  transform: translateY(-3px);
+ 
+  position: absolute;
+  left: 5px;
+  top: calc(50% - 6px);
+  width: 13px;
+}
+.columnResizer:not(.disabled_column_resize):hover::after {
+  content: url("../src/Images/resize_icon.svg");
+  transform: translateY(-3px);
+  position: absolute;
+  left: 5px;
+  top: calc(50% - 6px);
+  width: 13px;
+} */
+.column_resizer_body {
+  width: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+
+
+.form-label {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  font-weight: 550;
+  color: #252f4a;
+  text-align: start;
+}
+
+.form-select {
+  --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2378829D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
+  display: block;
+  width: 100%;
+  padding: 10.075px 39px 10.075px 13px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  color: #4b5675;
+  background-color: #ffffff;
+  background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px 12px;
+  border: 1px solid #dbdfe9;
+  border-radius: 0.65rem;
+  box-shadow: false;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+  font-size: 15px;
+  font-weight: 520;
+
+}
+
+.form-control {
+  display: block;
+  width: 92%;
+  /* padding: 0.775rem 1rem; */
+  /* padding:8px 0; */
+  padding-top: 10.075px;
+  padding-bottom: 10.075px;
+  padding-left: 13px;
+  padding-right: 13px;
+
+  font-size: 15px;
+
+  font-weight: 500;
+  appearance: none;
+  outline: none;
+
+  line-height: 1.5;
+  color: var(--bs-gray-700);
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: 1px solid #dbdfe9;
+  border-radius: 0.65rem;
+  box-shadow: false;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+label {
+  display: inline-block;
+
+}
+
+select {
+  word-wrap: normal;
+
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+  white-space: nowrap;
+  font-size: 15px;
+  /* font-weight: 550; */
+
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #192440;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:  #f8f8ff;
+}
+.footer {
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* left: 0; */
+  width: 100%;
+  background-color: #333; /* Change the background color as needed */
+  color: #fff; /* Change the text color as needed */
+  text-align: center;
+  padding: 10px;
+ 
+}
+
+/* .form-select {
+  appearance: none;
+}
+select {
+  word-wrap: normal;
+}
+
+button, select {
+  text-transform: none;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* {<TableContainer component={Paper} style={{ marginTop: "8px" }}>
+                <div className="acc">
+                  <TableHead style={{ paddingLeft: "15px" }}>Bill of Materials</TableHead>
+                </div>
+                <Table sx={{ minWidth: 200 }}  >
+                  <TableRow>
+                    <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px", fontWeight: "700" }}>S.No</StyledTableCell>
+                    
+                    <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", fontWeight: "700" }} >Item</StyledTableCell>
+                    <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px", fontWeight: "700" }} >Quantity</StyledTableCell>
+                  </TableRow>
+                  <TableBody>
+                    <StyledTableRow >
+                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
+                        1
+                      </StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Steel</StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >100</StyledTableCell>
+                    </StyledTableRow>
+                    <StyledTableRow >
+                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
+                        2
+                      </StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Cast Iron</StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >200</StyledTableCell>
+                    </StyledTableRow>
+                    <StyledTableRow >
+                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
+                        3
+                      </StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Gray cast iron</StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >300</StyledTableCell>
+                    </StyledTableRow>
+                    <StyledTableRow >
+                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
+                        4
+                      </StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >High carbon steel</StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >400</StyledTableCell>
+                    </StyledTableRow>
+                    <StyledTableRow >
+                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
+                        5
+                      </StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Aluminum</StyledTableCell>
+                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >500</StyledTableCell>
+                    </StyledTableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer> */
