@@ -67,6 +67,7 @@ const App = () => {
   const handleClose = () => {
     setOpen( false );
   };
+
   return (
     <div className={`${loading ? 'overlay ' : ''}`} >
       {loading && (
