@@ -1,98 +1,91 @@
 import React from 'react'
-import { Scene } from '../Model'
+import { Scene } from '../Scene'
 import { useGlobalcontext } from '../context'
 const Length4000 = () => {
-    const {formData,partname}=useGlobalcontext()
+  const { formData, partname, inletpos1, inletpos2, outletpos1, outletpos2 } = useGlobalcontext()
 
   return (
     <>
-    {
-      formData.diameter == 200 ?
-        <>
-          <Scene obj="models/models/17855 Vågen R Trough section 200 2000 mm.obj" mtl="models/models/17855 Vågen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[1000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø200" ? "#08F3E7" : "#838486"} />
-          <Scene obj="models/models/17855 Vågen R Trough section 200 2000 mm.obj" mtl="models/models/17855 Vågen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[-1000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø200" ? "#08F3E7" : "#838486"} />
-        </>
-        :
-        <>
-          <Scene obj="models/models/17855 Vågen R Trough section 300 2000 mm.obj" mtl="models/models/17855 Vågen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[0, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø300" ? "#08F3E7" : "#838486"} />
-          <Scene obj="models/models/17855 Vågen R Trough section 300 2000 mm.obj" mtl="models/models/17855 Vågen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[-2000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø300" ? "#08F3E7" : "#838486"} />
-        </>
+      {
+        formData.diameter == 200 ?
+          <>
+            <Scene obj="models/17855 Vagen R Trough section 200 2000 mm.obj" mtl="models/17855 Vagen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[1000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø200" ? "#08F3E7" : "#838486"} />
+            <Scene obj="models/17855 Vagen R Trough section 200 2000 mm.obj" mtl="models/17855 Vagen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[-1000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø200" ? "#08F3E7" : "#838486"} />
+          </>
+          :
+          <>
+            <Scene obj="models/17855 Vagen R Trough section 300 2000 mm.obj" mtl="models/17855 Vagen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[0, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø300" ? "#08F3E7" : "#838486"} />
+            <Scene obj="models/17855 Vagen R Trough section 300 2000 mm.obj" mtl="models/17855 Vagen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[-2000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø300" ? "#08F3E7" : "#838486"} />
+          </>
 
-    }
-    {
-      formData.diameter == 200 ? <Scene obj="models/models/17855 Intermediate bearing 200.obj" mtl="models/models/17855 Intermediate bearing 200.mtl" rotation={[0, Math.PI * 270 / 180, 0]} position={[-1000, 0, 0]} hexcolor={partname == "Intermedaite Bearing  200" ? "#08F3E7" : "#a38d72"} /> : <Scene obj="models/models/17855 Intermediate bearing 300.obj" mtl="models/models/17855 Intermediate bearing 300.mtl" rotation={[0, Math.PI * 270 / 180, 0]} position={[-1020, 0, 0]} hexcolor={partname == "Intermedaite Bearing  300" ? "#08F3E7" : "#a38d72"} />
-    }
-    {
-      formData.diameter == 200 ? <Scene obj="models/models/17855 Vågen R Bolt kit 200.obj" mtl="models/models/17855 Vågen R Bolt kit 200.mtl" rotation={[0, Math.PI * 270 / 180, 0]} position={[-3000, -110, 210]} hexcolor={partname == "Vagen R Bolt Kit  200" ? "#08F3E7" : "#a38d72"} /> : <Scene obj="models/models/17855 Vågen R Bolt kit 300.obj" mtl="models/models/17855 Vågen R Bolt kit 300.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[970, 0, 0]} hexcolor={partname == "Vagen R Bolt Kit  300" ? "#08F3E7" : "#a38d72"} />
-    }
-    {
-      formData.diameter == 200 ? <Scene obj="models/models/17855 Vågen R Drivestasjon 200.obj" mtl="models/models/17855 Vågen R Drivestasjon 200.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[1410, 25, -237]} hexcolor={partname == "Vagen R Drive Station Ø200KW" ? "#08F3E7" : "#4e96ae"} /> : <Scene obj="models/models/17855 Vågen R Drive station 300.obj" mtl="models/models/17855 Vågen R Drive station 300.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[970, 0, 0]} hexcolor={partname == "Vagen R Drive Station Ø300KW" ? "#08F3E7" : "#4e96ae"} />
-    }
-    {
-      formData.diameter == 200 ?
-        <>
-          {
-            formData.inletqty == 1 && <Scene obj="models/models/17855.40.31 200 Inlet.obj" mtl="models/models/17855.40.31 200 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, Math.PI * 180 / 180]} position={[900 - formData.inletp1, 200, 0]} hexcolor={partname == "Inlet  Ø200" ? "#08F3E7" : "#838486"} />
-          }
-          {
-            formData.inletqty == 2 &&
-            <>
-              <Scene obj="models/models/17855.40.31 200 Inlet.obj" mtl="models/models/17855.40.31 200 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, Math.PI * 180 / 180]} position={[900 - formData.inletp1, 200, 0]} hexcolor={partname == "Inlet's  Ø200" ? "#08F3E7" : "#838486"} />
-              <Scene obj="models/models/17855.40.31 200 Inlet.obj" mtl="models/models/17855.40.31 200 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, Math.PI * 180 / 180]} position={[900 - formData.inletp2, 200, 0]} hexcolor={partname == "Inlet's  Ø200" ? "#08F3E7" : "#838486"} />
-            </>
-          }
-        </>
-        :
-        <>
-          {
-            formData.inletqty == 1 && <Scene obj="models/models/17855.40.20.004_01 Inlet.obj" mtl="models/models/17855.40.20.004_01 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, Math.PI * 180 / 180]} position={[850 - formData.inletp1, 300, 0]} hexcolor={partname == "Inlet  Ø300" ? "#08F3E7" : "#838486"} />
-          }
-          {
-            formData.inletqty == 2 &&
-            <>
-              <Scene obj="models/models/17855.40.20.004_01 Inlet.obj" mtl="models/models/17855.40.20.004_01 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, Math.PI * 180 / 180]} position={[850 - formData.inletp1, 300, 0]} hexcolor={partname == "Inlet's  Ø300" ? "#08F3E7" : "#838486"} />
-              <Scene obj="models/models/17855.40.20.004_01 Inlet.obj" mtl="models/models/17855.40.20.004_01 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, Math.PI * 180 / 180]} position={[850 - formData.inletp2, 300, 0]} hexcolor={partname == "Inlet's  Ø300" ? "#08F3E7" : "#838486"} />
-            </>
-          }
+      }
+      {
+        formData.diameter == 200 ? <Scene obj="models/17855 Intermediate bearing 200.obj" mtl="models/17855 Intermediate bearing 200.mtl" rotation={[0, Math.PI * 270 / 180, 0]} position={[-1000, 0, 0]} hexcolor={partname == "Intermediate Bearing Ø200" ? "#08F3E7" : "#a38d72"} /> : <Scene obj="models/17855 Intermediate bearing 300.obj" mtl="models/17855 Intermediate bearing 300.mtl" rotation={[0, Math.PI * 270 / 180, 0]} position={[-1020, 0, 0]} hexcolor={partname == "Intermediate Bearing Ø300" ? "#08F3E7" : "#a38d72"} />
+      }
+      {
+        formData.diameter == 200 ? <Scene obj="models/17855 Vagen R Bolt kit 200.obj" mtl="models/17855 Vagen R Bolt kit 200.mtl" rotation={[0, Math.PI * 270 / 180, 0]} position={[-3000, -110, 210]} hexcolor={partname == "Vagen R Bolt Kit Ø200" ? "#08F3E7" : "#a38d72"} /> : <Scene obj="models/17855 Vagen R Bolt kit 300.obj" mtl="models/17855 Vagen R Bolt kit 300.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[970, 0, 0]} hexcolor={partname == "Vagen R Bolt Kit Ø300" ? "#08F3E7" : "#a38d72"} />
+      }
+      {
+        formData.diameter == 200 ? <Scene obj="models/17855 Vagen R Drivestasjon 200.obj" mtl="models/17855 Vagen R Drivestasjon 200.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[1410, 25, -237]} hexcolor={partname == "Vagen R Drive Station Ø200 2.2kW" ? "#08F3E7" : "#4e96ae"} /> : <Scene obj="models/17855 Vagen R Drive station 300.obj" mtl="models/17855 Vagen R Drive station 300.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[970, 0, 0]} hexcolor={partname == "Vagen R Drive Station Ø300 3kW" ? "#08F3E7" : "#4e96ae"} />
+      }
+      {
+        formData.diameter == 200 ?
+          <>
+            {
+              <Scene obj="models/17855.40.31 200 Inlet.obj" mtl="models/17855.40.31 200 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, 0]} position={[940 - inletpos1, 200, 0]} hexcolor={partname == "Inlet  Ø200" ? "#08F3E7" : "#838486"} />
+            }
+            {
+              formData.inletqty == 2 &&
+              <Scene obj="models/17855.40.31 200 Inlet.obj" mtl="models/17855.40.31 200 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, 0]} position={[940 - inletpos2, 200, 0]} hexcolor={partname == "Inlet  Ø200" ? "#08F3E7" : "#838486"} name="inletqty" />
+            }
+          </>
+          :
+          <>
+            {
+              <Scene obj="models/17855.40.20.004_01 Inlet.obj" mtl="models/17855.40.20.004_01 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, 0]} position={[805 - inletpos1, 300, 0]} hexcolor={partname == "Inlet  Ø300" ? "#08F3E7" : "#838486"} />
+            }
+            {
+              formData.inletqty == 2 &&
 
-        </>
-    }
+              <Scene obj="models/17855.40.20.004_01 Inlet.obj" mtl="models/17855.40.20.004_01 Inlet.mtl" rotation={[Math.PI * 90 / 180, 0, 0]} position={[805 - inletpos2, 300, 0]} hexcolor={partname == "Inlet  Ø300" ? "#08F3E7" : "#838486"} name="inletqty" />
 
-    {
-      formData.diameter == 200 ?
-        <>
-          {
-            formData.outletqty == 1 && <Scene obj="models/models/17855.40.31 200 Outlet.obj" mtl="models/models/17855.40.31 200 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-3000 + formData.outletp1, -200, 0]} hexcolor={partname == "Outlet  Ø200" ? "#08F3E7" : "#838486"} />
-          }
-          {
-            formData.outletqty == 2 &&
-            <>
-              <Scene obj="models/models/17855.40.31 200 Outlet.obj" mtl="models/models/17855.40.31 200 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-3000 + formData.outletp1, -200, 0]} hexcolor={partname == "Outlet's  Ø200" ? "#08F3E7" : "#838486"} />
-              <Scene obj="models/models/17855.40.31 200 Outlet.obj" mtl="models/models/17855.40.31 200 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-3000 + formData.outletp2, -200, 0]} hexcolor={partname == "Outlet's  Ø200" ? "#08F3E7" : "#838486"} />
-            </>
-          }
+            }
 
-        </>
-        :
-        <>
-          {
-            formData.outletqty == 1 && <Scene obj="models/models/17855.40.20.004_01 Outlet.obj" mtl="models/models/17855.40.20.004_01 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2900 + formData.outletp1, -300, 0]} hexcolor={partname == "Outlet  Ø300" ? "#08F3E7" : "#838486"} />
-          }
-          {
-            formData.outletqty == 2 &&
-            <>
-              <Scene obj="models/models/17855.40.20.004_01 Outlet.obj" mtl="models/models/17855.40.20.004_01 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2900 + formData.outletp1, -300, 0]} hexcolor={partname == "Outlet's  Ø300" ? "#08F3E7" : "#838486"} />
-              <Scene obj="models/models/17855.40.20.004_01 Outlet.obj" mtl="models/models/17855.40.20.004_01 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2900 + formData.outletp2, -300, 0]} hexcolor={partname == "Outlet's  Ø300" ? "#08F3E7" : "#838486"} />
-            </>
-          }
+          </>
+      }
 
-        </>
-    }
+      {
+        formData.diameter == 200 ?
+          <>
+            {
+              <Scene obj="models/17855.40.31 200 Outlet.obj" mtl="models/17855.40.31 200 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2940 + outletpos1, -200, 0]} hexcolor={partname == "Outlet  Ø200" ? "#08F3E7" : "#838486"} />
+            }
+            {
+              formData.outletqty == 2 &&
 
-    {
-      formData.diameter == 200 ? <Scene obj="models/models/17855 Vågen R End station 200.obj" mtl="models/models/17855 Vågen R End station 200.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 270 / 180, 0]} position={[-3410, 25, 236]} hexcolor={partname == "Vagen R End station Ø200" ? "#08F3E7" : "#C0C0C0"} /> : <Scene obj="models/models/17855 Vågen R End station - 300.obj" mtl="models/models/17855 Vågen R End station - 300.mtl" rotation={[Math.PI*180/180, Math.PI*270/180,Math.PI*90/180]} position={[-3030, 0, 0]} hexcolor={partname == "Vagen R End station Ø300" ? "#08F3E7" : "#C0C0C0"} />
-    }
-  </>
+              <Scene obj="models/17855.40.31 200 Outlet.obj" mtl="models/17855.40.31 200 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2940 + outletpos2, -200, 0]} hexcolor={partname == "Outlet  Ø200" ? "#08F3E7" : "#838486"} name="outletqty" />
+
+            }
+
+          </>
+          :
+          <>
+            {
+              <Scene obj="models/17855.40.20.004_01 Outlet.obj" mtl="models/17855.40.20.004_01 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2861 + outletpos1, -300, 0]} hexcolor={partname == "Outlet  Ø300" ? "#08F3E7" : "#838486"} />
+            }
+            {
+              formData.outletqty == 2 &&
+
+              <Scene obj="models/17855.40.20.004_01 Outlet.obj" mtl="models/17855.40.20.004_01 Outlet.mtl" rotation={[Math.PI * 270 / 180, 0, Math.PI * 180 / 180]} position={[-2861 + outletpos2, -300, 0]} hexcolor={partname == "Outlet  Ø300" ? "#08F3E7" : "#838486"} name="outletqty" />
+            }
+
+          </>
+      }
+
+      {
+        formData.diameter == 200 ? <Scene obj="models/17855 Vagen R End station 200.obj" mtl="models/17855 Vagen R End station 200.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 270 / 180, 0]} position={[-3410, 25, 236]} hexcolor={partname == "Vagen R End station Ø200" ? "#08F3E7" : "#C0C0C0"} /> : <Scene obj="models/17855 Vagen R End station - 300.obj" mtl="models/17855 Vagen R End station - 300.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 270 / 180, Math.PI * 90 / 180]} position={[-3030, 0, 0]} hexcolor={partname == "Vagen R End station Ø300" ? "#08F3E7" : "#C0C0C0"} />
+      }
+    </>
   )
 }
 

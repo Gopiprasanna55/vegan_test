@@ -1,0 +1,19 @@
+.css-yvszuv-Slider {
+    position: relative;
+    display: inline-block;
+    background-color: #ddd;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    /* width: 1500px; */
+    height: 10px;
+  }
+  .slider{
+    width: 100%;
+  }
+
+
+

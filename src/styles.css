@@ -3,14 +3,20 @@ body {
   font-family: 'Lato';
   width: 100%;
   height: 100%;
+ overflow-x: hidden;
 }
-
 .container {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-flow: nowrap column;
   overflow-x: hidden;
+}
+h2{
+  font-weight: 550;
+  margin: 0;
+  color: black;
+  font-family: 'Lato';
 }
 .content{
   display: flex;
@@ -19,44 +25,34 @@ body {
 }
 nav {
    /* width: 79vw; */
-  height: 5vh; 
+  height: 5vh;
   display: flex;
   align-items: center;
   gap: 15px;
   flex: 0 0 auto;
-  z-index:2;
-  position: relative;
-  background-color: #f8f8ff ;
-  /* background-color: #91a3b0 ; */
-  /* background-color: #979aaa ; */
-  /* background-color: #dcdcdc  ; */
-
-
-
+  /* z-index:2; */
+  /* position: relative; */
+  background-color: #F8F8FF ;
+  /* background-color: #91A3B0 ; */
+  /* background-color: #979AAA ; */
+  /* background-color: #DCDCDC  ; */
   /* background-image: url("../src/Images/body-bg.jpg"); */
   border-bottom: 2px solid #3F51B5;
-
   /* background-image: url("../src/Images/body-bg.jpg"); */
-
 }
-
 .model {
   width: 100%;
   height: 95vh;
 }
-
 .panel {
   display: flex;
   position: relative;
 }
-
 .header {
   background: lightblue;
   min-height: 50px;
   height: 100%;
 }
-
-
 .body {
   /* background: gray; */
   flex-grow: 3;
@@ -64,86 +60,63 @@ nav {
   flex-direction: column;
   flex-flow: row nowrap;
 }
-
 .sideBarResizeContainer {
   width: 30%;
 }
-
 .sidebar {
   /* background:#f8f8ff; */
   /* background-image: url("../src/Images/body-bg.jpg"); */
-
-  min-width: 415px;
+  /* 415 */
+  min-width: 420px;
   /* max-width: 550px; */
-  width: 415px;
+  width: 420px;
   box-sizing: border-box;
   text-align: center;
   flex-grow: 1;
-  background-color: #f0f8ff;
+  background-color: #F0F8FF;
   /* background-color:#8c92ac; */
-
-
-  /* background-color: #91a3b0 ; */
-  /* background-color: #dcdcdc  ; */
-
-
-  /* background-color: #979aaa ; */
-
-
+  /* background-color: #91A3B0 ; */
+  /* background-color: #DCDCDC  ; */
+  /* background-color: #979AAA ; */
 }
-
 /* .fixed{
   position: fixed;
 } */
 .css-46bh2p-MuiCardContent-root {
   padding: 16px;
 }
-
 /* footer{
   position: relative;
-
 } */
-
-
-
 .withMargin {
   margin: 10px;
   box-sizing: border-box;
 }
-
 option {
   font-size: 13px;
 }
-
 .label {
   font-size: 13px;
   font-weight: 550;
   margin: 0;
   color: black;
 }
-
 .content {
   flex-grow: 2;
   background: white;
 }
-
 .cards {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .acc {
   /* background-color:#00446a; */
-
   /* background-color:  rgb(255, 171, 41); */
   background-color: rgb(23, 18, 31);
   /* background-color:#654321; */
   /* background-color:#480607; */
   /* background-color:#808000; */
-
-
-
   width: 100%;
   padding: 10px 0px;
   cursor: pointer;
@@ -152,12 +125,9 @@ option {
   align-items: center;
   color: white;
   /* color: #FFF00C; */
-  /* color: #7cfc00; */
-  /* color: #00ffff ; */
-
+  /* color: #7CFC00; */
+  /* color: #00FFFF ; */
   /* color:#fffc79; */
-
-
 }
 .footer {
   position: fixed;
@@ -172,19 +142,15 @@ option {
 canvas {
   position: fixed;
 }
-
 .sidebarcontent {
   width: 100%;
   height: 100%;
   /* margin: 8px; */
   /* position: fixed; */
 }
-
 .sidebarcards {
-  
   margin: 8px;
 }
-
 .cardheader {
   background-color: #000;
   width: 100%;
@@ -196,7 +162,46 @@ canvas {
   align-items: center;
   color: white;
 }
-
+.btn1 {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(23, 18, 31);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding:5px 0px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn {
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(23, 18, 31);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 .customHandle {
   cursor: ew-resize;
   width: 10px;
@@ -211,7 +216,6 @@ canvas {
   display: flex;
   align-items: center;
 }
-
 .customResizeBorder {
   cursor: ew-resize;
   width: 5px;
@@ -222,14 +226,7 @@ canvas {
   align-content: center;
   justify-content: center;
   overflow: visible;
-
 }
-
-
-
-
-
-
 .columnResizer {
   width: 20px !important;
   min-width: 20px !important;
@@ -238,18 +235,15 @@ canvas {
   position: relative;
   border-bottom: 1px solid rgba(224, 224, 224, 1);
   /* background-color: red; */
-
   /* border-right: 1px solid black; */
   /* border: 1px solid; */
 }
-
 /* .columnResizer:nth-child(1){
   display: none;
 } */
 /* .columnResizer:not(.disabled_column_resize):after {
   content: url("../src/Images/resize_disabled_icon.svg");
   transform: translateY(-3px);
- 
   position: absolute;
   left: 5px;
   top: calc(50% - 6px);
@@ -269,32 +263,45 @@ canvas {
   max-width: 20px !important;
   border-bottom: 1px solid rgba(224, 224, 224, 1);
 }
-
-
-
 .form-label {
   margin-bottom: 0.5rem;
   font-size: 14px;
   font-weight: 550;
-  color: #252f4a;
+  color: #252F4A;
   text-align: start;
 }
-
+.item{
+    font-size: 14px;
+    color: #252F4A;
+    text-align: start;
+  padding-left: 7px;
+  /* background-color: red; */
+  height: 30px;
+  margin: 0;
+  /* text-align: center; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.item:hover{
+  background-color:#dce7f7;
+  border-radius: 5px;
+  color: blue;
+}
 .form-select {
   --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2378829D' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
   display: block;
   width: 100%;
   padding: 10.075px 39px 10.075px 13px;
-
   font-weight: 500;
   line-height: 1.5;
-  color: #4b5675;
-  background-color: #ffffff;
+  color: #4B5675;
+  background-color: #FFFFFF;
   background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 16px 12px;
-  border: 1px solid #dbdfe9;
+  border: 1px solid #DBDFE9;
   border-radius: 0.65rem;
   box-shadow: false;
   outline: none;
@@ -302,9 +309,7 @@ canvas {
   appearance: none;
   font-size: 15px;
   font-weight: 520;
-
 }
-
 .form-control {
   display: block;
   width: 92%;
@@ -314,33 +319,25 @@ canvas {
   padding-bottom: 10.075px;
   padding-left: 13px;
   padding-right: 13px;
-
   font-size: 15px;
-
   font-weight: 500;
   appearance: none;
   outline: none;
-
   line-height: 1.5;
   color: var(--bs-gray-700);
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
-  border: 1px solid #dbdfe9;
+  border: 1px solid #DBDFE9;
   border-radius: 0.65rem;
   box-shadow: false;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
 label {
   display: inline-block;
-
 }
-
 select {
   word-wrap: normal;
-
 }
-
 option {
   font-weight: normal;
   display: block;
@@ -349,26 +346,20 @@ option {
   white-space: nowrap;
   font-size: 15px;
   /* font-weight: 550; */
-
 }
-
 button,
 select {
   text-transform: none;
 }
-
-
 ::-webkit-scrollbar {
   width: 5px;
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #192440;
   border-radius: 6px;
 }
-
 ::-webkit-scrollbar-track {
-  background-color:  #f8f8ff;
+  background-color:  #F8F8FF;
 }
 .footer {
   /* position: fixed; */
@@ -379,85 +370,58 @@ select {
   color: #fff; /* Change the text color as needed */
   text-align: center;
   padding: 10px;
- 
 }
-
 /* .form-select {
   appearance: none;
 }
 select {
   word-wrap: normal;
 }
-
 button, select {
   text-transform: none;
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* {<TableContainer component={Paper} style={{ marginTop: "8px" }}>
-                <div className="acc">
-                  <TableHead style={{ paddingLeft: "15px" }}>Bill of Materials</TableHead>
-                </div>
-                <Table sx={{ minWidth: 200 }}  >
-                  <TableRow>
-                    <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px", fontWeight: "700" }}>S.No</StyledTableCell>
-                    
-                    <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", fontWeight: "700" }} >Item</StyledTableCell>
-                    <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px", fontWeight: "700" }} >Quantity</StyledTableCell>
-                  </TableRow>
-                  <TableBody>
-                    <StyledTableRow >
-                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
-                        1
-                      </StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Steel</StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >100</StyledTableCell>
-                    </StyledTableRow>
-                    <StyledTableRow >
-                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
-                        2
-                      </StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Cast Iron</StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >200</StyledTableCell>
-                    </StyledTableRow>
-                    <StyledTableRow >
-                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
-                        3
-                      </StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Gray cast iron</StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >300</StyledTableCell>
-                    </StyledTableRow>
-                    <StyledTableRow >
-                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
-                        4
-                      </StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >High carbon steel</StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >400</StyledTableCell>
-                    </StyledTableRow>
-                    <StyledTableRow >
-                      <StyledTableCell component="th" scope="row" style={{ padding: "10px", fontFamily: "Lato", width: "70px" }}>
-                        5
-                      </StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato" }} >Aluminum</StyledTableCell>
-                      <StyledTableCell style={{ padding: "10px", fontFamily: "Lato", width: "70px" }} >500</StyledTableCell>
-                    </StyledTableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer> */
+.overlay {
+  position: relative;
+}
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  z-index: 1; /* Ensure the overlay appears above other content */
+}
+.ftco-section {
+  /* backdrop-filter: blur(8px) brightness(80%); */
+     height:100vh;
+     display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
+ }
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  /* top: 20%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Place the spinner above the overlay */
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Spinner color */
+  border-top: 4px solid #fff; /* Spinner color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
