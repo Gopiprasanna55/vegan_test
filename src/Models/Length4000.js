@@ -9,13 +9,13 @@ const Length4000 = () => {
       {
         formData.diameter == 200 ?
           <>
-            <Scene obj="models/17855 Vagen R Trough section 200 2000 mm.obj" mtl="models/17855 Vagen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[1000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø200" ? "#08F3E7" : "#838486"} />
-            <Scene obj="models/17855 Vagen R Trough section 200 2000 mm.obj" mtl="models/17855 Vagen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[-1000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø200" ? "#08F3E7" : "#838486"} />
+            <Scene obj="models/17855 Vagen R Trough section 200 2000 mm.obj" mtl="models/17855 Vagen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[1000, 0, 0]} hexcolor={(partname === "Trough Section 2000 Ø200 Rotor Carbon Steel" || partname === "Trough Section 2000 Ø200 Rotor Stainless Steel") ? "#08F3E7" : "#838486"} />
+            <Scene obj="models/17855 Vagen R Trough section 200 2000 mm.obj" mtl="models/17855 Vagen R Trough section 200 2000 mm.mtl" rotation={[0, 0, 0]} position={[-1000, 0, 0]} hexcolor={(partname === "Trough Section 2000 Ø200 Rotor Carbon Steel" || partname === "Trough Section 2000 Ø200 Rotor Stainless Steel") ? "#08F3E7" : "#838486"} />
           </>
           :
           <>
-            <Scene obj="models/17855 Vagen R Trough section 300 2000 mm.obj" mtl="models/17855 Vagen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[0, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø300" ? "#08F3E7" : "#838486"} />
-            <Scene obj="models/17855 Vagen R Trough section 300 2000 mm.obj" mtl="models/17855 Vagen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[-2000, 0, 0]} hexcolor={partname == "Trough Section 2000 Ø300" ? "#08F3E7" : "#838486"} />
+            <Scene obj="models/17855 Vagen R Trough section 300 2000 mm.obj" mtl="models/17855 Vagen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[0, 0, 0]} hexcolor={(partname == "Trough Section 2000 Ø300 Rotor Carbon Steel") || (partname == "Trough Section 2000 Ø300 Rotor Stainless Steel") ? "#08F3E7" : "#838486"} />
+            <Scene obj="models/17855 Vagen R Trough section 300 2000 mm.obj" mtl="models/17855 Vagen R Trough section 300 2000 mm.mtl" rotation={[0, Math.PI * 90 / 180, Math.PI * 90 / 180]} position={[-2000, 0, 0]} hexcolor={(partname == "Trough Section 2000 Ø300 Rotor Carbon Steel") || (partname == "Trough Section 2000 Ø300 Rotor Stainless Steel") ? "#08F3E7" : "#838486"} />
           </>
 
       }

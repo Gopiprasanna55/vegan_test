@@ -8,7 +8,9 @@ const Length3000 = () => {
   return (
     <>
       {
-        formData.diameter == 200 ? <Scene obj="models/17855 Vagen R Trough section 200 3000 mm.obj" mtl="models/17855 Vagen R Trough section 200 3000 mm.mtl" rotation={[0, 0, 0]} position={[0, 0, 0]} hexcolor={partname == "Trough Section 3000 Ø200" ? "#08F3E7" : "#838486"} /> : <Scene obj="models/17855 Vagen R Trough section 300 3000 mm.obj" mtl="models/17855 Vagen R Trough section 300 3000 mm.mtl" rotation={[0, Math.PI * 90 / 180, 0]} position={[-800, 0, 0]} hexcolor={partname == "Trough Section 3000 Ø300" ? "#08F3E7" : "#838486"} />
+        formData.diameter == 200 ? <Scene obj="models/17855 Vagen R Trough section 200 3000 mm.obj" mtl="models/17855 Vagen R Trough section 200 3000 mm.mtl" rotation={[0, 0, 0]} position={[0, 0, 0]}
+          hexcolor={(partname == "Trough Section 3000 Ø200 Rotor Carbon Steel") || (partname == "Trough Section 3000 Ø200 Rotor Stainless Steel") ? "#08F3E7" : "#838486"} /> : <Scene obj="models/17855 Vagen R Trough section 300 3000 mm.obj" mtl="models/17855 Vagen R Trough section 300 3000 mm.mtl" rotation={[0, Math.PI * 90 / 180, 0]} position={[-800, 0, 0]}
+            hexcolor={(partname == "Trough Section 3000 Ø300 Rotor Carbon Steel") || (partname == "Trough Section 3000 Ø300 Rotor Stainless Steel") ? "#08F3E7" : "#838486"} />
       }
       {
         formData.diameter == 200 ? <Scene obj="models/17855 Vagen R Drivestasjon 200.obj" mtl="models/17855 Vagen R Drivestasjon 200.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[1410, 25, -237]} hexcolor={partname == "Vagen R Drive Station Ø200 2.2kW" ? "#08F3E7" : "#4e96ae"} /> : <Scene obj="models/17855 Vagen R Drive station 300.obj" mtl="models/17855 Vagen R Drive station 300.mtl" rotation={[Math.PI * 180 / 180, Math.PI * 90 / 180, 0]} position={[700, 0, 0]} hexcolor={partname == "Vagen R Drive Station Ø300 3kW" ? "#08F3E7" : "#4e96ae"} />

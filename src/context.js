@@ -1,5 +1,5 @@
 
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect, useRef } from "react";
 
 const AppContext = createContext()
 export const AppProvider = ({ children }) => {
@@ -17,11 +17,45 @@ export const AppProvider = ({ children }) => {
   const [inletpos2, setInletpos2] = useState(245);
   const [outletpos1, setOutletpos1] = useState(0);
   const [outletpos2, setOutletpos2] = useState(245);
-  const [selection, setSelection] = useState(false)
+  // const [selection, setSelection] = useState(false)
   const [colorselection, setColorSelection] = useState(false)
   const [inletuuids, setInletuuids] = useState([])
   const [outletuuids, setOutletuuids] = useState([])
   const [material, setMaterial] = useState("Carbon Steel")
+  const [highlightingtext, setHighlightingText] = useState('')
+  const [loadingSet, setLoadingSet] = useState(new Set())
+
+  const prevLengthRef = useRef(formData.length);
+
+  useEffect(() => {
+    if (prevLengthRef.current !== formData.length) {
+      prevLengthRef.current = formData.length;
+      setShadowVisible(true);
+      setPartname("");
+      setObjdata([]);
+      setOutletuuids([]);
+      setInletuuids([]);
+      setHighlightingText('');
+    }
+  }, [formData.length]);
+
+  const addLoadingId = (id) => {
+    setLoadingSet((prev) => {
+      if (prev.has(id)) return prev;
+      const next = new Set(prev);
+      next.add(id);
+      return next;
+    });
+  };
+
+  const removeLoadingId = (id) => {
+    setLoadingSet((prev) => {
+      if (!prev.has(id)) return prev;
+      const next = new Set(prev);
+      next.delete(id);
+      return next;
+    });
+  };
   var diameter = formData.diameter;
   var length = formData.length
   var troughtsection2000, qty2000;
@@ -93,7 +127,7 @@ export const AppProvider = ({ children }) => {
       troughtsection3000 = "Trough Section 3000 Ø300"
       qty3000 = 4
     }
-  } 
+  }
 
 
 
@@ -120,18 +154,18 @@ export const AppProvider = ({ children }) => {
   }
 
   var kw;
-  if(formData.diameter==200){
-    if(formData.length<=6000){
-      kw=2.2
-    }else{
-      kw=3
+  if (formData.diameter == 200) {
+    if (formData.length <= 6000) {
+      kw = 2.2
+    } else {
+      kw = 3
     }
   }
-  if(formData.diameter==300){
-    if(formData.length<=6000){
-      kw=3
-    }else{
-      kw=5.5
+  if (formData.diameter == 300) {
+    if (formData.length <= 6000) {
+      kw = 3
+    } else {
+      kw = 5.5
     }
   }
 
@@ -139,15 +173,14 @@ export const AppProvider = ({ children }) => {
   const tabledata = [
     { partnumber: formData.diameter == 200 ? `Vagen R Drive Station Ø200 ${kw}kW` : `Vagen R Drive Station Ø300 ${kw}kW`, description: "-", qty: 1 },
     { partnumber: formData.diameter == 200 ? "Vagen R End station Ø200" : "Vagen R End station Ø300", description: material, qty: 1 },
-    { partnumber: troughtsection2000, description: material, qty: qty2000 },
-    { partnumber: troughtsection3000, description: material, qty: qty3000 },
+    { partnumber: `${troughtsection2000} Rotor ${material}`, description: material, qty: qty2000 },
+    { partnumber: `${troughtsection3000} Rotor ${material}`, description: material, qty: qty3000 },
     { partnumber: bearing, description: "-", qty: bearingqty },
     { partnumber: bolts, description: "-", qty: boltqty },
     { partnumber: `Inlet ${formData.diameter == 200 ? " Ø200" : " Ø300"}`, description: "-", qty: formData.inletqty },
     { partnumber: `Outlet ${formData.diameter == 200 ? " Ø200" : " Ø300"}`, description: "-", qty: formData.outletqty },
   ]
   const filtertabledata = tabledata.filter(item => item.partnumber !== undefined && item.qty !== undefined);
-
   return <AppContext.Provider value={{
     formData,
     setFormData,
@@ -162,8 +195,10 @@ export const AppProvider = ({ children }) => {
     inletpos2, setInletpos2,
     outletpos1, setOutletpos1,
     outletpos2, setOutletpos2,
-    setSelection, selection, setColorSelection, colorselection,
-    setInletuuids, inletuuids, setOutletuuids, outletuuids, setMaterial, material
+    setColorSelection, colorselection,
+    setInletuuids, inletuuids, setOutletuuids, outletuuids, setMaterial, material,
+    highlightingtext, setHighlightingText,
+    loadingSet, addLoadingId, removeLoadingId,
   }}>
     {children}
   </AppContext.Provider>
