@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - mobileappdevelopement
+name: Build and deploy Node.js app to Azure Web App - veganupdate
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D2D807C5B97E43ACADDF354AF98DBC33 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F9863EC091954617B380FA436B6053F9 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_EB795E1F24D14DC6AD5085CB77A4129A }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0A58A1A6B3664D2BB9C21951EA4C19EB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A1E60F45A4744973880869230561E9E9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_55AEE66F2C834A499ECD2BEADE865EE6 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'mobileappdevelopement'
+          app-name: 'veganupdate'
           slot-name: 'Production'
           package: .
           
