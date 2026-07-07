@@ -1,0 +1,14 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*", "/js/*", "/models/*"]
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".manifest": "application/manifest+json",
+    ".mtl": "model/mtl",
+    ".obj": "model/obj",
+    ".glb": "model/gltf-binary",
+    ".gltf": "model/gltf+json"
+  }
+}
