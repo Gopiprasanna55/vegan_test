@@ -23,12 +23,11 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: npm install and build
-        env:
-          CI: false
+      - name: npm install, build, and test
         run: |
-          npm install --legacy-peer-deps
+          npm install
           npm run build --if-present
+          npm run test --if-present
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -52,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0A58A1A6B3664D2BB9C21951EA4C19EB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A1E60F45A4744973880869230561E9E9 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_55AEE66F2C834A499ECD2BEADE865EE6 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_21997D2A329B43C9BF1B4DA77975FAC3 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6AC262209F1148D388217405C36C9AF9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0C105873991F4AEDB5C057BE19E83DB1 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -63,3 +62,4 @@ jobs:
           app-name: 'veganupdate'
           slot-name: 'Production'
           package: .
+          
